@@ -18,7 +18,7 @@ sequenceDiagram
     B-->>-A: Provide signature
     A->>+C: Submit signature
     Note right of A: Self-Sovereign Identity (SSI) with Zero-Trust Architecture (ZTA)
-    C->>+D: Verify signatur provided
+    C->>+D: Verify signature provided
     loop Continuous Auth
         B-->>B: sync cached verification or extend validity of access bearer token
     end
