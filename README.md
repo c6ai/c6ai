@@ -6,18 +6,19 @@
 
 ## 1stWallet Sequence Diagram v240224a:
 ```mermaid
+%%{init: {'themeVariables': {'fontFamily': 'Bernard MT Condensed', 'fontSize': '24px','fontWeight': 'bold'}}}%%
 sequenceDiagram
     participant A as Constituent VC-Holder
-    participant B as Self-Attested SSI-as-a-Service Edge Custodial/Guardianship Wallet PaaS
-    participant C as Verification-as-a-Service Authenticator
-    participant D as Revocation/Issuance-as-a-Service Keycloak
-    participant E as Zero-Trust Registry Service Trustee DLT
+    participant B as SSI Custodial/Guardianship Wallet
+    participant C as Verification Authenticator
+    participant D as Revocation/Issuance Keycloak
+    participant E as Zero-Trust Registry Service
 	actor A
-    Note right of D: Critical Infrastructure as Code (IaC) for Trust Over IP (ToIP)
+    Note right of D: vSPACE IaC for Trust Over IP (ToIP)
     A->>+B: Request wallet signature
     B-->>-A: Provide signature
     A->>+C: Submit signature
-    Note right of A: Self-Sovereign Identity (SSI) with Zero-Trust Architecture (ZTA)
+    Note right of B: SSI with Zero-Trust Architecture (ZTA)
     C->>+D: Verify signature provided
     loop Continuous Auth
         B-->>B: sync cached verification or extend validity of access bearer token
@@ -25,6 +26,6 @@ sequenceDiagram
     D->>+E: Request wallet's public key
     E-->>-D: Send wallet's public key
     D-->>-C: Use public key to verify signature
-    Note right of B: Certifiable, Privacy-Aware and Scalable i-Voting
+    Note right of B: Scalable, Privacy-Aware and Confidential EMS
     C-->>-A: Authentication status
 ```
