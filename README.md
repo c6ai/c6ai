@@ -1,10 +1,3 @@
-
-<!--
-### Hi there 👋
-**c6ai/c6ai** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on the GitHub profile.
--->
-
-## 1stWallet Sequence Diagram v240224a:
 ```mermaid
 %%{init: {'themeVariables': {'fontFamily': 'Bernard MT Condensed', 'fontSize': '24px','fontWeight': 'bold'}}}%%
 sequenceDiagram
